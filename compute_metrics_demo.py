@@ -54,24 +54,13 @@ DATASET_LIST = [
 def validate_dataset_list(dataset_list):
 
     valid_datasets = []
-    missing_files = []
     
     for tiff_path, csv_path in dataset_list:
         tiff_exists = os.path.exists(tiff_path)
         csv_exists = os.path.exists(csv_path)
         
         if tiff_exists and csv_exists:
-            valid_datasets.append((tiff_path, csv_path))
-        else:
-            if not tiff_exists:
-                print(f"Missing TIFF: {tiff_path}")
-                missing_files.append(tiff_path)
-            if not csv_exists:
-                print(f"Missing CSV: {csv_path}")
-                missing_files.append(csv_path)
-    
-    if missing_files:
-        print(f"\nValidation: {len(valid_datasets)} valid, {len(missing_files)} missing")
+            valid_datasets.append((tiff_path, csv_path))  
     
     return valid_datasets
 

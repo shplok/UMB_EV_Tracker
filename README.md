@@ -237,6 +237,8 @@ Slice,X_COM,Y_COM,EV_ID
 - `Y_COM`: Y coordinate (pixels)
 - `EV_ID` (optional): Particle ID
 
+Make sure that there aren't any rows full of ",,,,,,,,,", that will mess up the pipeline.
+
 ## API Reference
 
 ### EVTracker Class

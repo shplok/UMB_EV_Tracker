@@ -1,17 +1,3 @@
-"""
-FIXED VERSION of compute_pr_roc.py
-
-This version properly handles False Negatives in PR/ROC curve computation.
-
-Key changes:
-1. Only the BEST match per GT frame is labeled as TP (not all matches)
-2. False Negatives are added to labels array with score=0.0
-3. Proper documentation of assumptions
-
-Author: Fixed by Claude (Nov 2025)
-Original issues: Missing FNs in labels array
-"""
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -22,25 +8,7 @@ from sklearn.metrics import precision_recall_curve, roc_curve, auc, average_prec
 def calculate_detection_labels_and_scores(all_particles: Dict[int, Dict[str, List]],
                                           gt_track: Dict[str, Any],
                                           distance_threshold: float = 20.0) -> Tuple[np.ndarray, np.ndarray]:
-    """
-    Create binary labels and scores for all detections across all frames.
-    
-    FIXED VERSION: Properly includes False Negatives
-    
-    Args:
-        all_particles: Dict mapping frame_idx -> {'positions': [...], 'scores': [...]}
-        gt_track: Dict with 'frames' and 'positions' arrays
-        distance_threshold: Max distance for a detection to be considered TP
-    
-    Returns:
-        labels: Binary array (1 = true positive, 0 = false positive)
-        scores: Detection confidence scores
-        
-    Note:
-        - For each GT frame, only the CLOSEST detection is considered
-        - Other detections in the same GT frame are labeled as FP
-        - Missed GT frames are added with label=1, score=0.0
-    """
+
     labels = []
     scores = []
     

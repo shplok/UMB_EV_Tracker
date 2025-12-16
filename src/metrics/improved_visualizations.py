@@ -1,9 +1,3 @@
-"""
-Improved Visualization Module for EV Detection Pipeline
-
-Creates publication-quality visualizations combining track paths with performance metrics.
-"""
-
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
@@ -20,18 +14,6 @@ def create_comprehensive_track_report(image_stack: np.ndarray,
                                      frame_metrics: Dict[str, Any],
                                      output_dir: str,
                                      top_n_tracks: int = 5) -> str:
-    """
-    Create comprehensive per-file visualization with tracks + performance metrics
-    
-    Args:
-        image_stack: Original image stack
-        tracks: All detected tracks
-        all_particles: All particle detections
-        gt_track: Ground truth track data
-        frame_metrics: Frame-by-frame detection metrics
-        output_dir: Output directory
-        top_n_tracks: Number of top tracks to show in detail
-    """
     
     # Sort tracks by quality
     sorted_tracks = sorted(tracks.items(),

@@ -286,13 +286,6 @@ results = quick_analyze("movie.tif", "gt.csv", threshold=0.6)
 | Fragmented tracks | Increase movement/gaps: `tracker.set_params(max_distance=35, max_frame_gap=5)` |
 | Memory issues | Reduce `bg_window_size`, process files individually |
 
-## Testing
-
-```bash
-# Update file paths in src/test_all_features.py first
-python src/test_all_features.py
-```
-
 ## Project Structure
 
 ```

@@ -20,7 +20,7 @@ def create_large_ev_filter(radius: int = 10, size: int = 41, sigma: float = 2.0)
     # Dark ring (negative response to particle edges)
     filter_img[(distance > radius) & (distance <= radius*1.5)] = -0.8
     # Faint outer ring (slight positive response to background contrast)
-    filter_img[(distance > radius*1.5) & (distance <= radius*2.0)] = 0.3
+    filter_img[(distance > radius*1.5) & (distance <= radius*2.0)] = 0.3 # specify max values in readme...
 
     # Soften the filter with Gaussian blur
     filter_img = ndimage.gaussian_filter(filter_img, sigma=sigma)

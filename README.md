@@ -34,11 +34,11 @@ EV Tracker provides automated detection, tracking, and analysis of extracellular
 ```bash
 # Correct
 cd UMB_EV_Tracker/
-python src/test_all_features.py
+python src/run_demo.py
 
 # Incorrect
 cd UMB_EV_Tracker/src/
-python test_all_features.py  # Import errors!
+python run_demo.py  # Import errors!
 ```
 
 ## Quick Start
@@ -293,7 +293,7 @@ results = quick_analyze("movie.tif", "gt.csv", threshold=0.6)
 UMB_EV_Tracker/
 ├── src/
 │   ├── ev_tracker.py          # Main API
-│   ├── test_all_features.py   # Test suite
+│   ├── run_demo.py   # Test suite
 │   ├── helpers/               # Core pipeline
 │   ├── metrics/               # Performance evaluation
 │   └── pipeline/              # Image processing

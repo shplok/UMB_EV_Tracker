@@ -57,6 +57,7 @@ datasets = [("movie1.tif", "gt1.csv"), ("movie2.tif", "gt2.csv")]
 results = tracker.run_batch(datasets)
 print(f"Global AP: {results['global_ap']:.3f}")
 ```
+### Note: Ground Truth Files are NOT Required to Run the Pipeline (applies to run and run_batch)
 
 ## Understanding `run()` vs `run_batch()`
 

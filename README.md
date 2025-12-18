@@ -313,3 +313,5 @@ UMB_EV_Tracker/
 
 **Version:** 1.0  
 **Python:** 3.7+  
+
+**Special Thanks to Joanna Dahl, Tales Imbiriba, Luis González Gudiño, and Soroush Kargar for entrusting this portion of the project to me!**

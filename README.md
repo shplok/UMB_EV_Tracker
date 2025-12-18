@@ -293,7 +293,7 @@ results = quick_analyze("movie.tif", "gt.csv", threshold=0.6)
 UMB_EV_Tracker/
 ├── src/
 │   ├── ev_tracker.py          # Main API
-│   ├── run_demo.py   # Test suite
+│   ├── run_demo.py            # Test suite
 │   ├── helpers/               # Core pipeline
 │   ├── metrics/               # Performance evaluation
 │   └── pipeline/              # Image processing
